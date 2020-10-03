@@ -1,0 +1,15 @@
+#playbackRate-keyboard-indicator {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  z-index: 2147483647;
+  padding: 6px 12px;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+#playbackRate-keyboard-indicator.playbackRate-keyboard-indicator--hidden {
+  display: none;
+}
