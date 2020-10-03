@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "playbackRate",
+  "version": "1.0",
+  "description": "Change playbackRate with keyboard shortcuts.",
+  "icons": {
+    "32": "icons/icon-32.png",
+    "64": "icons/icon-64.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["src/style.css"],
+      "js": ["src/main.js"]
+    }
+  ]
+}
