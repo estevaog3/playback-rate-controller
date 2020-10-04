@@ -1,5 +1,7 @@
 const NODE_ID = "playbackRate-keyboard-indicator";
 
+const ignoreUrls = ["youtube.com", "udemy.com"];
+
 const state = {
   playbackRate: 1.0,
 };
@@ -44,6 +46,9 @@ const handleKeydown = (e) => {
 };
 
 const setupExtension = () => {
+  if (ignoreUrls.some((url) => window.location.href.includes(url))) {
+    return;
+  }
   document.addEventListener("keydown", handleKeydown);
   window.onload = () => {
     setupPlaybackRateIndicator();
