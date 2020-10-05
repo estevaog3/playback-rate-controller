@@ -1,6 +1,6 @@
-# playbackRate
+# playback-rate-controller
 
-A simple chrome extension to control any video speed with keyboard shortcuts.
+A simple chrome extension to control any video/audio speed with keyboard shortcuts.
 
 ## Shortcuts
 

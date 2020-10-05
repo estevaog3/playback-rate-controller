@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "playbackRate",
+  "name": "Playback Rate Controller",
   "version": "1.0",
-  "description": "Change playbackRate with keyboard shortcuts.",
+  "description": "Change speed of audios and videos with keyboard shortcuts.",
   "icons": {
     "32": "icons/icon-32.png",
     "64": "icons/icon-64.png",
