@@ -22,20 +22,25 @@ const setupPlaybackRateIndicator = () => {
   document.body.appendChild(node);
 };
 
+const updatePlaybackRateInDOM = (playbackRate) => {
+  const nodes = document.querySelectorAll("video,audio");
+  if (nodes.length === 0) {
+    return;
+  }
+  nodes.forEach((node) => {
+    node.playbackRate = playbackRate;
+  });
+  togglePlaybackRateIndicator(playbackRate);
+};
+
 const shortcuts = {
   190: () => {
     state.playbackRate += 0.25;
-    document.querySelectorAll("video,audio").forEach((element) => {
-      element.playbackRate = state.playbackRate;
-    });
-    togglePlaybackRateIndicator(state.playbackRate);
+    updatePlaybackRateInDOM(state.playbackRate);
   },
   188: () => {
     state.playbackRate -= 0.25;
-    document.querySelectorAll("video,audio").forEach((element) => {
-      element.playbackRate = state.playbackRate;
-    });
-    togglePlaybackRateIndicator(state.playbackRate);
+    updatePlaybackRateInDOM(state.playbackRate);
   },
 };
 
