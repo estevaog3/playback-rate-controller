@@ -25,15 +25,15 @@ const setupPlaybackRateIndicator = () => {
 const shortcuts = {
   190: () => {
     state.playbackRate += 0.25;
-    document.querySelectorAll("video").forEach((videoElement) => {
-      videoElement.playbackRate = state.playbackRate;
+    document.querySelectorAll("video,audio").forEach((element) => {
+      element.playbackRate = state.playbackRate;
     });
     togglePlaybackRateIndicator(state.playbackRate);
   },
   188: () => {
     state.playbackRate -= 0.25;
-    document.querySelectorAll("video").forEach((videoElement) => {
-      videoElement.playbackRate = state.playbackRate;
+    document.querySelectorAll("video,audio").forEach((element) => {
+      element.playbackRate = state.playbackRate;
     });
     togglePlaybackRateIndicator(state.playbackRate);
   },
